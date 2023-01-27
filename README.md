@@ -15,9 +15,9 @@ The development has been moved to the following places:
 Please continue to file bugs and open pull requests there as usual.
 
 ---
-# Cartesian ROS Control
+# Cartesian ros_control
 
-This package brings mechanisms for Cartesian control to the ROS-control framework.
+This package brings mechanisms for Cartesian control to the ros_control framework.
 
 ## Overview
 
@@ -36,13 +36,13 @@ This set of packages aims at filling this gap and get you started with Cartesian
 
 
 ## Major features at a glance
-- **Add Cartesian functionality to ROS control**. This brings new interfaces for
+- **Add Cartesian functionality to ros_control**. This brings new interfaces for
   controller design, such as a ```PoseCommandInterface```, a ```TwistCommandInterface```, and a new Cartesian trajectory  definition. Example controllers include a ```TwistController``` and a ```CartesianTrajectoryController```. 
 
 - **Enable Cartesian trajectory control** in your applications. Specify your task comfortably with 
   waypoints in task space. ROS-side interpolation and streaming of setpoints over the new interfaces is only one of several alternatives. 
 
-- **Use (conventional) ROS control** for Cartesian trajectory execution.  You don't need to change anything in the driver's HW-abstraction of your specific robot if that supports current ROS control.
+- **Use (conventional) ros_control** for Cartesian trajectory execution.  You don't need to change anything in the driver's HW-abstraction of your specific robot if that supports current ros_control.
 
 - **Hand-over control to the robot by forwarding trajectories**.
 Two new interfaces ```CartesianTrajectoryInterface``` and ```JointTrajectoryInterface``` let robots take care of driver-side interpolation to achieve best performance.
@@ -50,9 +50,9 @@ Two new interfaces ```CartesianTrajectoryInterface``` and ```JointTrajectoryInte
 - **Speed-scale trajectory execution**. All trajectory executions (both Cartesian and joint-based) can be speed-scaled within 0 to 100% at runtime. This gives you flexibility in setting-up new applications and during test runs. Changing this continuously even lets you reshape trajectory execution without re-teaching. 
 
 ## Robots Overview
-In the spirit of ROS control, the implementation is robot-agnostic and shall support applications on a wide range of robots. The table below shows what features will be available with this enhancement.
+In the spirit of ros_control, the implementation is robot-agnostic and shall support applications on a wide range of robots. The table below shows what features will be available with this enhancement.
 
-| Feature | Robots with new interfaces | Robots with current ROS control |
+| Feature | Robots with new interfaces | Robots with current ros_control |
 | -------- | -------- | --- |
 | Cartesian trajectory control | &check; | &check; |
 | Cartesian trajectory forwarding | &check; | |
